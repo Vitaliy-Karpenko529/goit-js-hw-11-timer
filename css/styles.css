@@ -1,0 +1,22 @@
+.title {
+  text-align: center;
+  margin-top: 200px;
+  color: green;
+  font-size: 70px;
+}
+.timer {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 25px;
+}
+.value {
+  color: red;
+}
+.field {
+  margin-right: 50px;
+}
+.value,
+.label {
+  font-size: 50px;
+}
