@@ -2,12 +2,11 @@ class CountdownTimer {
     constructor({ selector, targetDate }) {
         this.selector = selector;
         this.targetDate = targetDate;
-        this.refs = {
-            daysRefs: document.querySelector('[data-value = "days"]'),
-            hoursRefs: document.querySelector('[data-value = "hours"]'),
-            minsRefs: document.querySelector('[data-value = "mins"]'),
-            secsRefs: document.querySelector('[data-value = "secs"]')
-        }
+            this.days = document.querySelector('[data-value = "days"]');
+            this.hours = document.querySelector('[data-value = "hours"]');
+            this.mins = document.querySelector('[data-value = "mins"]');
+        this.secs = document.querySelector('[data-value = "secs"]');
+        this.deltaTime = 0;
     }
 
 
@@ -25,10 +24,10 @@ class CountdownTimer {
     }
 
     updateClockFace({ days, hours, mins, secs }) {
-    this.refs.daysRefs.textContent = `${days}`
-    this.refs.hoursRefs.textContent = `${hours}`
-    this.refs.minsRefs.textContent = `${mins}`
-    this.refs.secsRefs.textContent = `${secs}`
+    this.days.textContent = `${days}`
+    this.hours.textContent = `${hours}`
+    this.mins.textContent = `${mins}`
+    this.secs.textContent = `${secs}`
     }
 
         getTimeComponents(time) {
